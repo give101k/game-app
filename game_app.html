@@ -8,16 +8,15 @@
 	<script type="text/javascript" src="javas.js"></script>
 </head>
 <body>
-<div class="container">
 	<section id="home_page">
 		<div class="head">
 			<h1>Circle game</h1>
 		</div>
 		<div class="test">
-			<div class="homes-button" id="b1">Rules</div>
-			<div class="homes-button" id="b2">Game</div>
-			<div class="homes-button" id="b3">Leaderboard</div>
-			<div class="homes-button" id="b4">Game over</div>
+			<div class="homes-button" id="b1"><h2>Rules</h2></div>
+			<div class="homes-button" id="b2"><h2>Game</h2></div>
+			<div class="homes-button" id="b3"><h2>Leaderboard</h2></div>
+			<div class="homes-button" id="b4"><h2>Game over</h2></div>
 		</div>
 	</section>
 
@@ -35,13 +34,23 @@
 
 	<section id="Game">
 		<div class="button home">Home</div>
-		<div class="timer">Time: 15s</div>
-		<div class="score">Score: 0pts</div>
-		<div class="circle" id="master"></div>
-		<div class="circle" id="circle#1"></div>
-		<div class="circle" id="circle#2"></div>
-		<div class="circle" id="circle#3"></div>
-		<div class="circle" id="circle#4"></div>
+		<div class="time">
+			<p>Time:</p> <p class="timer">15s</p>
+		</div>
+		<div class="score">
+			<p>Score:</p> <p class="points">0pts</p>
+		</div>
+		<div id="master"></div>
+		<div class="game-container">
+			<div class="row1">
+				<div class="circle" id="circle#1"></div>
+				<div class="circle" id="circle#2"></div>
+			</div>
+			<div class="row2">
+				<div class="circle" id="circle#3"></div>
+				<div class="circle" id="circle#4"></div>
+			</div>
+		</div>
 	</section>
 
 	<section id="Leaderboard">
@@ -86,6 +95,5 @@
 		<h1>Game over</h1>
 		<div class="over">Good job, you have scored: 0pts</div>
 	</section>
-</div>
 </body>
 </html>
