@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="javas.js"></script>
+</head>
+<body>
+<div class="container">
+	<section id="home_page">
+		<div class="head">
+			<h1>Circle game</h1>
+		</div>
+		<div class="test">
+			<div class="homes-button" id="b1">Rules</div>
+			<div class="homes-button" id="b2">Game</div>
+			<div class="homes-button" id="b3">Leaderboard</div>
+			<div class="homes-button" id="b4">Game over</div>
+		</div>
+	</section>
+
+	<section id="Rules">
+		<div class="button home">Home</div>
+		<h1>Rules</h1>
+		<ol>
+			<li>Click on the circle that the color matches the master circle</li>
+			<li>The color will change and repeat step one</li>
+			<li>Continue until time runs out</li>
+			<li>If you click on the wrong circle the game will end</li>
+			<li>The more answer you get right the more point you get</li>
+		</ol>
+	</section>
+
+	<section id="Game">
+		<div class="button home">Home</div>
+		<div class="timer">Time: 15s</div>
+		<div class="score">Score: 0pts</div>
+		<div class="circle" id="master"></div>
+		<div class="circle" id="circle#1"></div>
+		<div class="circle" id="circle#2"></div>
+		<div class="circle" id="circle#3"></div>
+		<div class="circle" id="circle#4"></div>
+	</section>
+
+	<section id="Leaderboard">
+		<div class="button home">Home</div>
+		<h1>Leaderboard</h1>
+		<table>
+			<tr>
+				<th>Postion</th>
+				<th>Name</th>
+				<th>Score</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</section>
+
+	<section id="game_over">
+		<div class="button home">Home</div>
+		<h1>Game over</h1>
+		<div class="over">Good job, you have scored: 0pts</div>
+	</section>
+</div>
+</body>
+</html>

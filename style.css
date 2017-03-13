@@ -1,0 +1,79 @@
+h1{
+	text-align:center;
+	vertical-align: middle;
+	margin: auto;
+	font-size: 50px;
+	font-family: 'Lobster', cursive;
+	font-weight: normal;
+}
+#body{
+	height: 900px;
+	width: 600px;
+	background-color: #696969;
+}
+section{
+	 margin: 20px;
+	 display: none;
+}
+
+.button{
+	width: 150px;
+	height: 30px;
+	background-color: #B1B1B1;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+
+.circle{
+	height: 25px;
+	width: 25px;
+	border-radius: 12.5px;
+	border: 1px solid black;
+}
+
+#home_page{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.container{
+	width: 375px;
+	height: 667px;
+	margin: auto;
+	background-image: url(img/space.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+} 
+
+.head{
+	width: 100%;
+	height: 80px;
+	background-color: #B1B1B1;
+	align-items: center;
+	display: flex;
+}
+
+.homes-button {
+	width: 150px;
+	height: 60px;
+	background-color: #B1B1B1;
+	text-align: center;
+	line-height: 30px;
+	margin: auto;
+	margin-top: 65px;
+	border-radius: 10px;
+	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
