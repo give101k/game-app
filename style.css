@@ -38,10 +38,27 @@ p
     color: #fff;
 }
 
-table,
+table
+{
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    margin-top: 40px;
+
+    border-collapse: collapse;
+
+    color: #fff;
+    border: 1px solid white;
+}
+
 th,
 td
 {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+
+    text-align: center;
+
     color: #fff;
     border: 1px solid white;
 }
@@ -73,8 +90,6 @@ td
     border-radius: 50%;
 }
 
-
-
 .container
 {
     position: fixed;
@@ -86,7 +101,7 @@ td
     margin: auto;
     padding: 0;
 
-    background-image: url(img/space.png);
+    background-image: url(https://i.imgur.com/eSRd9gb.png);
     background-repeat: no-repeat;
 }
 
@@ -142,7 +157,7 @@ td
 
 .time
 {
-    margin-left: 70px;
+    margin-left: 90px;
 }
 
 .score
@@ -161,6 +176,7 @@ td
 
     align-items: center;
 }
+
 .over
 {
     margin-top: 60px;
@@ -205,5 +221,5 @@ td
 
 #rules
 {
-    margin-left: 45px;
+    margin-left: 65px;
 }
