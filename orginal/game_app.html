@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="javas.js"></script>
+</head>
+<body>
+<div class="container">
+
+	<section id="home_page">
+		<div class="head">
+			<h1>Circle game</h1>
+		</div>
+		<div>
+			<div class="homes-button" id="b1"><h2>Rules</h2></div>
+			<div class="homes-button" id="b2"><h2>Game</h2></div>
+			<div class="homes-button" id="b3"><h2>Leaderboard</h2></div>
+			<div class="homes-button" id="b4"><h2>Game over</h2></div>
+		</div>
+	</section>
+
+	<section id="Rules">
+		<div class="head">
+			<div class="button home"><p>Home</p></div>
+			<h1 id="rules">Rules</h1>
+		</div>
+		<ol>
+			<li>Click on the circle that the color matches the master circle</li>
+			<li>The color will change and repeat step one</li>
+			<li>Continue until time runs out</li>
+			<li>If you click on the wrong circle the game will end</li>
+			<li>The more answer you get right the more point you get</li>
+		</ol>
+	</section>
+
+	<section id="Game">
+		<div class="head2">
+			<div class="button home" id="exit_button"><p>Exit</p></div>
+			<div class="time">
+				<p>Time:</p> <p id="timer">15s</p>
+			</div>
+			<div class="score">
+				<p>Score:</p> <p id="points">0pts</p>
+			</div>
+		</div>
+		<div id="master"></div>
+		<div class="game-container">
+			<div class="row1">
+				<div class="circle" id="circle#1"></div>
+				<div class="circle" id="circle#2"></div>
+			</div>
+			<div class="row2">
+				<div class="circle" id="circle#3"></div>
+				<div class="circle" id="circle#4"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="Leaderboard">
+		<div class="head">
+			<div class="button home"><p>Home</p></div>
+			<h1>Leaderboard</h1>
+		</div>
+
+		<table>
+			<tr>
+				<th>Postion</th>
+				<th>Name</th>
+				<th>Score</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</section>
+
+	<section id="game_over">
+		<div class="head">
+			<h1>Game over</h1>
+		</div>
+		<div class="over"><h2>Good job, you have scored: 0pts</2></div>
+		<div class="homes-button" id="play-again"><h2>Play Again</h2></div>
+		<div class="homes-button" id="exit"><h2>Exit</h2></div>
+	</section>
+
+	<section id="quit">
+		<div class="overlay"></div>
+		<div class="cont">
+			<h2>Do you want to quit?</h2>
+			<div class="homes-button" id="yes"><h2>Yes</h2></div>
+			<div class="homes-button" id="no"><h2>No</h2></div>
+		</div>
+	</section>
+</div>
+</body>
+</html>
