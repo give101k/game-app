@@ -80,6 +80,10 @@ $(document).ready(function(){
     $('#clear').click(function() {
         clearStorage();
     });
+
+    $(".back").click(function(){
+        $("#alert1").hide();
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -153,6 +157,10 @@ function checkTime() {
 }
 
 function shuffleCircles() {
+    for (var i = 1; i <5; i++) {
+        rmClass("#circle"+i);
+    }
+    rmClass("#master");
     master_index = getRandomArbitrary()-1;
     shuffle(colors);
     $("#master").addClass(colors[master_index]);
@@ -193,13 +201,13 @@ function start_game() {
 }
 
 function storeData(){
-    var i = 0,
+    /*var i = 0,
     key = [],
     sKey,
-    j = 0;
-    var copy = false;
+    j = 0;*/
+    //var copy = false;
     var name = $('#player-name').val();
-    var score = $('#player-score').val();
+    /*var score = $('#player-score').val();
     for (; sKey = window.localStorage.key(i); i++) {
         key[i] = sKey
     }
@@ -210,13 +218,20 @@ function storeData(){
         else{
             j++;
         }
-    }
-    if (copy == false) {
+    }*/
+    for (var i in localStorage) {
+         if (i == name) {
+             $("#alert1").show();
+             return;
+         } 
+     }
+     localStorage.setItem(name, score);
+    /*if (copy == false) {
         localStorage.setItem(name, score);
     }
     else{
         $("#alert1").show();
-    }
+    }*/
 }
 function pullData() {
     var i = 0,
@@ -266,4 +281,10 @@ function table(name,score) {
 function clearStorage(){
     localStorage.clear();
     $('#alert2').show();
+} 
+function rmClass(id) {
+    $(id).removeClass('red');
+    $(id).removeClass('green');
+    $(id).removeClass('white');
+    $(id).removeClass('blue');
 }
