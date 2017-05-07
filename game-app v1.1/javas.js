@@ -26,6 +26,7 @@ $(document).ready(function(){
      $("#b3").click(function() {
      	hideall();
      	$("#Leaderboard").show();
+        clearTable();
         pullData();
      });
 
@@ -93,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //User defined function
+
 function hideall() {
     $("#game_over").hide();
     $("#Leaderboard").hide();
@@ -102,6 +104,7 @@ function hideall() {
     $("#quit").hide();
     $('#alert1').hide();
     $('#alert2').hide();
+    $('#alert3').hide();
 }
 
 // This functions takes an array and suffles it
@@ -201,50 +204,38 @@ function start_game() {
 }
 
 function storeData(){
-    /*var i = 0,
-    key = [],
-    sKey,
-    j = 0;*/
-    //var copy = false;
     var name = $('#player-name').val();
-    /*var score = $('#player-score').val();
-    for (; sKey = window.localStorage.key(i); i++) {
-        key[i] = sKey
-    }
-    while(copy == false && j < key.length){
-        if (key[j]==name){
-            copy = true;
+
+    if (name != "") {
+
+        for (var i in localStorage) {
+             if (i == name) {
+                 $("#alert1").show();
+                return;
+            } 
         }
-        else{
-            j++;
-        }
-    }*/
-    for (var i in localStorage) {
-         if (i == name) {
-             $("#alert1").show();
-             return;
-         } 
-     }
-     localStorage.setItem(name, score);
-    /*if (copy == false) {
+
         localStorage.setItem(name, score);
     }
     else{
-        $("#alert1").show();
-    }*/
+        $('#alert3').show();
+        setTimeout(function(){
+            $('#alert3').hide();
+        },2000);
+    }
 }
 function pullData() {
     var i = 0,
-    key = [],
-    data = [],
-    sKey;
-    for (; sKey = window.localStorage.key(i); i++) {
-        key[i] = sKey
-        data[i]= window.localStorage.getItem(sKey);
+    keys = [],
+    data = [];
+    for (var key in localStorage) {
+        keys[i] = key
+        data[i]= Number(localStorage.getItem(key));
+        i++;
     }
     
-    bubbleSort(data,key);
-    table(key,data);
+    bubbleSort(data,keys);
+    table(keys,data);
 
 }
 
@@ -271,9 +262,17 @@ function bubbleSort(items,items2) {
 function table(name,score) {
     var length = name.length;
     var j = 1;
-    for (var i = 0; i < length; i++) {
-        $('#leader').append('<tr><td>'+j+'</td><td>'+name[i]+'</td><td>'+score[i]+'</td></tr>');
-        j++;
+    if (length >= 5) {
+        for (var i = length-1; i >= (length-5); i--) {
+            $('#leader').append('<tr><td>'+j+'</td><td>'+name[i]+'</td><td>'+score[i]+'</td></tr>');
+            j++;
+        }
+    }
+    else{
+        for (var i = length-1; i >= 0; i--) {
+            $('#leader').append('<tr><td>'+j+'</td><td>'+name[i]+'</td><td>'+score[i]+'</td></tr>');
+            j++;
+        }
     }
 
 }
@@ -287,4 +286,8 @@ function rmClass(id) {
     $(id).removeClass('green');
     $(id).removeClass('white');
     $(id).removeClass('blue');
+}
+
+function clearTable() {
+      $('#leader').html('<tbody><tr><th>Postion</th><th>Name</th> <th>Score</th></tr></tbody>');
 }
